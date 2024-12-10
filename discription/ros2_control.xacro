@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-
+  
     <ros2_control name="GazeboSystem" type="system">
         <hardware>
             <plugin>gz_ros2_control/GazeboSimSystem</plugin>
@@ -27,6 +27,7 @@
     <gazebo>
         <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
             <parameters>$(find learn_one)/config/my_controllers.yaml</parameters>
+            <parameters>$(find learn_one)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
         </plugin>
     </gazebo>
 
